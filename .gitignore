@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+*.egg
+*.egg-info/
+dist/
+build/
+
+# Environment (contains API keys and secrets)
+.env
+.env.local
+.env.production
+
+# Logs
+logs/*.log
+!logs/.gitkeep
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Deployment artifacts
+*.tar.gz
+*.zip
+
+# Virtual environments
+venv/
+.venv/
