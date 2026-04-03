@@ -1,0 +1,27 @@
+[
+  {
+    "type": "function",
+    "function": {
+      "name": "extract_form_fields",
+      "description": "从用户描述中提取表单字段值",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "form_type": {
+            "type": "string",
+            "description": "表单类型（请假/报销/采购等）"
+          },
+          "extracted_fields": {
+            "type": "object",
+            "description": "提取的表单字段键值对"
+          },
+          "confidence": {
+            "type": "number",
+            "description": "提取置信度（0-1）"
+          }
+        },
+        "required": ["form_type", "extracted_fields", "confidence"]
+      }
+    }
+  }
+]

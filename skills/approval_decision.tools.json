@@ -1,0 +1,37 @@
+[
+  {
+    "type": "function",
+    "function": {
+      "name": "make_approval_decision",
+      "description": "分析审批请求并返回决策建议",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "decision": {
+            "type": "string",
+            "enum": ["approve", "review", "reject"],
+            "description": "决策建议"
+          },
+          "confidence": {
+            "type": "number",
+            "description": "决策置信度(0-1)"
+          },
+          "risk_level": {
+            "type": "string",
+            "enum": ["低", "中", "高"],
+            "description": "风险等级"
+          },
+          "reason": {
+            "type": "string",
+            "description": "决策理由"
+          },
+          "auto_approve": {
+            "type": "boolean",
+            "description": "是否建议自动通过"
+          }
+        },
+        "required": ["decision", "confidence", "risk_level", "reason", "auto_approve"]
+      }
+    }
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "type": "function",
+    "function": {
+      "name": "analyze_pain_points",
+      "description": "分析用户反馈数据，识别主要痛点",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "pain_points": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "category": {"type": "string", "description": "痛点类别"},
+                "severity": {"type": "string", "enum": ["low", "medium", "high"], "description": "严重程度"},
+                "frequency": {"type": "integer", "description": "出现频率"},
+                "description": {"type": "string", "description": "痛点描述"}
+              }
+            },
+            "description": "识别的痛点列表"
+          },
+          "top_issues": {
+            "type": "array",
+            "items": {"type": "string"},
+            "description": "最主要的问题"
+          },
+          "improvement_suggestions": {
+            "type": "array",
+            "items": {"type": "string"},
+            "description": "改进建议"
+          }
+        },
+        "required": ["pain_points", "top_issues"]
+      }
+    }
+  }
+]

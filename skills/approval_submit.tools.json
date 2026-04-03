@@ -1,0 +1,34 @@
+[
+  {
+    "type": "function",
+    "function": {
+      "name": "analyze_approval",
+      "description": "分析审批请求并返回建议",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "suggested_approvers": {
+            "type": "array",
+            "items": {"type": "string"},
+            "description": "建议的审批人列表"
+          },
+          "estimated_duration": {
+            "type": "string",
+            "description": "预计审批时长"
+          },
+          "risk_level": {
+            "type": "string",
+            "enum": ["low", "medium", "high"],
+            "description": "风险等级"
+          },
+          "suggestions": {
+            "type": "array",
+            "items": {"type": "string"},
+            "description": "审批建议"
+          }
+        },
+        "required": ["suggested_approvers", "estimated_duration", "risk_level"]
+      }
+    }
+  }
+]
